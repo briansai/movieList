@@ -1,0 +1,36 @@
+.header{
+  font-size: 3em;
+  font-weight: bold;
+  font-family: fantasy;
+  padding: 1%;
+}
+
+.search {
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+
+.center-component {
+  margin: 0 35%;
+  padding: 3%;
+}
+
+.movie-entry {
+  border-style: solid;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  padding: 3%;
+}
+
+.entry {
+
+}
+
+.watched {
+  font-size: .4em;
+  float: right;
+}
+
+div {
+  text-align: center;
+}

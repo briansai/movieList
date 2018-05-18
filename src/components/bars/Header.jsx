@@ -1,6 +1,6 @@
 var Header = () => (
   <div>
-    <header>Movie List</header>
+    <header className="header">Movie List</header>
   </div>
 );
 
