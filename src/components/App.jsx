@@ -6,8 +6,8 @@ class App extends React.Component {
       movies: Movies[0].provided,
       searchQuery: '',
       addMovieQuery: '',
-      movieWatched: false,
-      watch: 'Not Watched'
+      // movieWatched: false,
+      // watch: 'Not Watched'
     }
   }
 
@@ -20,19 +20,19 @@ class App extends React.Component {
   handleSearchClick() {
     //pass searchHandler into handleClick
     var currentThis = this; 
-    var searchedMovie = this.state.movies.filter(function(movie) {
-      return currentThis.state.searchQuery === movie.title
-    });
-      
-    if (searchedMovie.length !== 0) {
-      this.setState({movies: searchedMovie})
-    } else if (this.state.searchQuery.length >= 0) {
-      if (Movies[0].added.length !== 0) {
-        this.setState({movies: Movies[0].added})
-      } else {
-        this.setState({movies: Movies[0].provided})
-      }
+    var searchedMovie;
+
+    for (var key in Movies[0]) {
+      searchedMovie = this.state.Movies[0].filter(function(movie) {
+        return currentThis.state.searchQuery === movie.title;
+      });
     }
+      
+    // if there is a searched movie present
+      //  set the state of the movie to the searched movie  
+    if (searchedMovie.length !== 0) {
+      this.setState({movies: searchedMovie});
+    };
   }
 
   addMovieHandler(queryString) {
@@ -41,22 +41,26 @@ class App extends React.Component {
   }
 
   handleAddClick() {
-    Movies[0].added.push({title: this.state.addMovieQuery});
-    this.setState({movies: Movies[0].added})
+    //put the new movie into the not watched category
+    Movies[0].notWatched.push({
+      title: this.state.addMovieQuery,
+      watched: false
+    });
   }
 
-  handleWatchedClick() {
-    this.setState({movieWatched: !this.state.movieWatched});
-    if (this.state.movieWatched) {
-      this.setState({watch: 'Watched'})
-      console.log(this.state.watch)
-    } else {
-      this.setState({watch: 'Not Watched'})
-    }
-  }
+  // handleWatchedClick() {
+  //   this.setState({movieWatched: !this.state.movieWatched});
+  //   if (this.state.movieWatched) {
+  //     this.setState({watch: 'Watched'})
+  //     console.log(this.state.watch)
+  //   } else {
+  //     this.setState({watch: 'Not Watched'})
+  //   }
+  // }
 
 
   render() {
+    console.log(this.state.movies);
     return (
       <div>
         <div className="top">
@@ -70,9 +74,7 @@ class App extends React.Component {
         </div>
         <div className="center-component">
           <div className="movie-list">
-            <MovieList movies={this.state.movies} 
-            handleWatchView={this.handleWatchedClick.bind(this)}
-            toggleWatch={this.state.watch}/>
+            <MovieList movies={this.state.movies} />
           </div>
         </div>
       </div>
