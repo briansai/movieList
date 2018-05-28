@@ -1,0 +1,12 @@
+DROP DATABASE movie;
+CREATE DATABASE movie;
+USE movie;
+
+CREATE TABLE movies (
+  id INT NOT NULL AUTO_INCREMENT, 
+  movie VARCHAR(50) NOT NULL, 
+  watched BOOLEAN NOT NULL,
+  added BOOLEAN NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY (movie)
+);

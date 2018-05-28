@@ -1,0 +1,12 @@
+"use strict";
+
+var MovieEntry = function MovieEntry(props) {
+  return React.createElement(
+    "div",
+    { className: "movie-entry" },
+    props.movie.title
+  );
+};
+
+window.MovieEntry = MovieEntry;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21wb25lbnQvbW92aWVzL01vdmllRW50cnkuanN4Il0sIm5hbWVzIjpbIk1vdmllRW50cnkiLCJwcm9wcyIsIm1vdmllIiwidGl0bGUiLCJ3aW5kb3ciXSwibWFwcGluZ3MiOiI7O0FBQUEsSUFBTUEsYUFBYSxTQUFiQSxVQUFhLENBQUNDLEtBQUQsRUFBVztBQUM1QixTQUNFO0FBQUE7QUFBQSxNQUFLLFdBQVUsYUFBZjtBQUNHQSxVQUFNQyxLQUFOLENBQVlDO0FBRGYsR0FERjtBQUtELENBTkQ7O0FBUUFDLE9BQU9KLFVBQVAsR0FBb0JBLFVBQXBCIiwiZmlsZSI6Ik1vdmllRW50cnkuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBNb3ZpZUVudHJ5ID0gKHByb3BzKSA9PiB7XG4gIHJldHVybiggXG4gICAgPGRpdiBjbGFzc05hbWU9XCJtb3ZpZS1lbnRyeVwiPlxuICAgICAge3Byb3BzLm1vdmllLnRpdGxlfVxuICAgIDwvZGl2PlxuICApXG59XG5cbndpbmRvdy5Nb3ZpZUVudHJ5ID0gTW92aWVFbnRyeTsiXX0=
