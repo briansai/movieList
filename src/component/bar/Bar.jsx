@@ -10,7 +10,7 @@ class Bar extends React.Component {
     const searchMovie = dummyData.filter(function(movie) {
       return movie.title === text;
     })
-    console.log(searchMovie);
+
     this.props.handleSearch(searchMovie);
   }
 
@@ -20,9 +20,6 @@ class Bar extends React.Component {
         dummyData[x].added = true;
       }
     }
-    
-    console.log(text);
-    console.log(dummyData);
   }
  
   render() {

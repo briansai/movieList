@@ -25,6 +25,11 @@
   padding: 3%;
 }
 
+.watched-button {
+  float: right;
+  font-size: .5em;
+}
+ 
 div {
   text-align: center;
 }
