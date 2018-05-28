@@ -1,9 +1,8 @@
 {
   "name": "brian",
   "version": "1.0.0",
-  "main": "new_underbar.js",
   "scripts": {
-    "server-dev": "nodemon server/index.js", 
+    "server-dev": "nodemon server/controllers.js", 
     "babel" : "babel src/component --out-dir compiled --presets=env,react --source-maps inline"
   },
   "dependencies": {
